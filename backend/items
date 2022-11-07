@@ -1,0 +1,66 @@
+[
+    {
+    "id": 1,
+    "image": "https://www.thespruceeats.com/thmb/lFrWbdXFUgCJXBuYtPR4pGs0SuU=/1000x1000/smart/filters:no_upscale()/chilaquiles-recipe-5213268-hero-01-09015a76503e4f07820ad17811d88a6f.jpg",
+    "name": "Chilaquiles",
+    "price": 350,
+    "category": "Meal",
+    "description": "Made of triangular pieces of fried or toasted corn tortilla, soaked in a red or green hot sauce, topped with shredded chicken, chorizo, shredded beef, and scrambled or sunny side up egg."
+  },
+  {
+    "id": 2,
+    "image": "https://www.thespruceeats.com/thmb/VKigxCVPbKbpfe_ToHfT3ftMSis=/940x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/huevos-rancheros-recipe-2342631-hero-01-798f601845ea4509a5885ab41c52e2af.jpg",
+    "name": "Huevos Rancheros",
+    "price": 350,
+    "category": "Meal",
+    "description": "It's made with two fried corn tortillas, topped with fried beans, and two sunny side up eggs all bathed in red hot sauce and decorated with coriander and freshly ground black pepper."
+  },
+  {
+    "id": 3,
+    "image": "https://villagrouploreto.s3.amazonaws.com/uploads/photo/image/4070/tequila-mexican-drinks.jpg",
+    "name": "Tequila",
+    "price": 150,
+    "category": "Alcohol",
+    "description": "Made from fermented blue agave plants, the process of distilling tequila is strictly regulated, and only a few places in the country can produce it."
+  },
+  {
+    "id": 4,
+    "image": "https://villagrouploreto.s3.amazonaws.com/uploads/photo/image/4077/flavored-beverages-aguas-frescas-de-sabor.jpg",
+    "name": "Agua Frescas",
+    "price": 80,
+    "category": "Juice",
+    "description": "From street taco stands to gourmet restaurants, you'll typically be able to find a few different flavors available, like lime with chia or basil, strawberry, or mango."
+  },
+  {
+    "id": 5,
+    "image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2012/2/29/0/0149359_Making-Taco_s4x3.jpg.rend.hgtvcom.616.462.suffix/1371603491866.jpeg",
+    "name": "Tacos",
+    "price": 250,
+    "category": "Meal",
+    "description": "Hundreds of fillings can be put on a corn tortilla! The most common are beef steak, flank steak, chorizo, offal, “al pastor”, hot and sweet marinated pork."
+  },
+  {
+    "id": 6,
+    "image": "https://villagrouploreto.s3.amazonaws.com/uploads/photo/image/4073/paloma-coctel-mexican-drink.jpg",
+    "name": "Paloma",
+    "price": 150,
+    "category": "Alcohol",
+    "description": "A paloma is fizzier than a margarita, made with grapefruit soda and a splash of lime, and it's incredibly refreshing on a hot afternoon."
+  },
+  {
+    "id": 7,
+    "image": "https://villagrouploreto.s3.amazonaws.com/uploads/photo/image/4072/margarita.jpg",
+    "name": "Margarita",
+    "price": 200,
+    "category": "Alcohol",
+    "description": "Lime is the classic flavor for margaritas, but mixologists experiment with different fruits and vegetables, like pineapple, cucumber, and jalapeno."
+  },
+  {
+    "id": 8,
+    "image": "https://d36tnp772eyphs.cloudfront.net/blogs/1/2020/04/Churreria-General-de-la-Rep%C3%BAblica.jpg",
+    "name": "Churros Rellenos",
+    "price": 200,
+    "category": "Dessert",
+    "description": "Filled with your choice of fruit, chocolate, Nutella, or other fillings."
+  }
+]
