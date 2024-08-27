@@ -42,8 +42,8 @@ function App() {
   // });
   //08.28.24
   let filterItems = items.filter((item) => {
-    return category === "" || item.category === category;
-  });  
+    return category === "" ? true : item.category === category;
+  });
 
   const filterCategory = (category) => {
     setCategory(category);
@@ -59,8 +59,8 @@ function App() {
   // });
   //08.28.24
   let filterItemsAtUI = items.filter((item) => {
-    return categoryAtUI === "" || item.category === categoryAtUI;
-  });  
+    return categoryAtUI === "" ? true : item.category === categoryAtUI;
+  });
 
   const filterCategoryAtUI = (category) => {
     setCategoryAtUI(category);

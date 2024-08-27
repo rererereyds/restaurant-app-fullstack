@@ -21,7 +21,7 @@ const PurchaseConfirmation = ({setOpenPurchaseConfirmation, checkout}) => {
         </div>
 
         <div>
-          <img className='taco-image' src='https://cdn-icons-png.flaticon.com/512/189/189149.png' alt='ending image' />
+          <img className='taco-image' src='https://cdn-icons-png.flaticon.com/512/189/189149.png' alt='This is a taco.' />
         </div>
 
       </div>
