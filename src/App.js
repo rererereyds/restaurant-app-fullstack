@@ -35,11 +35,15 @@ function App() {
   ///FILTER CATEGORY (3)
   const [category, setCategory] = useState("");
 
+  // let filterItems = items.filter((item) => {
+  //   return category === ""
+  //   ? item
+  //   : item.category === category;
+  // });
+  //08.28.24
   let filterItems = items.filter((item) => {
-    return category === ""
-    ? item
-    : item.category === category;
-  });
+    return category === "" || item.category === category;
+  });  
 
   const filterCategory = (category) => {
     setCategory(category);
@@ -48,11 +52,15 @@ function App() {
 
   const [categoryAtUI, setCategoryAtUI] = useState("");
 
+  // let filterItemsAtUI = items.filter((item) => {
+  //   return categoryAtUI === ""
+  //   ? item
+  //   : item.category === categoryAtUI  ;
+  // });
+  //08.28.24
   let filterItemsAtUI = items.filter((item) => {
-    return categoryAtUI === ""
-    ? item
-    : item.category === categoryAtUI  ;
-  });
+    return categoryAtUI === "" || item.category === categoryAtUI;
+  });  
 
   const filterCategoryAtUI = (category) => {
     setCategoryAtUI(category);
