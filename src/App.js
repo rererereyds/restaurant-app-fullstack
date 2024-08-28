@@ -35,15 +35,15 @@ function App() {
   ///FILTER CATEGORY (3)
   const [category, setCategory] = useState("");
 
-  // let filterItems = items.filter((item) => {
-  //   return category === ""
-  //   ? item
-  //   : item.category === category;
-  // });
-  //08.28.24
   let filterItems = items.filter((item) => {
-    return category === "" ? true : item.category === category;
+    return category === ""
+    ? item
+    : item.category === category;
   });
+  // 08.28.24
+  // let filterItems = items.filter((item) => {
+  //   return category === "" ? true : item.category === category;
+  // });
 
   const filterCategory = (category) => {
     setCategory(category);
@@ -52,22 +52,22 @@ function App() {
 
   const [categoryAtUI, setCategoryAtUI] = useState("");
 
-  // let filterItemsAtUI = items.filter((item) => {
-  //   return categoryAtUI === ""
-  //   ? item
-  //   : item.category === categoryAtUI  ;
-  // });
-  //08.28.24
   let filterItemsAtUI = items.filter((item) => {
-    return categoryAtUI === "" ? true : item.category === categoryAtUI;
+    return categoryAtUI === ""
+    ? item
+    : item.category === categoryAtUI  ;
   });
+  //08.28.24
+  // let filterItemsAtUI = items.filter((item) => {
+  //   return categoryAtUI === "" ? true : item.category === categoryAtUI;
+  // });
 
   const filterCategoryAtUI = (category) => {
     setCategoryAtUI(category);
   };
 
 
-  ///DELETING ITEM TO THE ARRAY (4)
+  // /DELETING ITEM TO THE ARRAY (4)
   const deleteItem = async (id) => {
 
     // const updatedList = items.filter(item => item.id !== id);
@@ -84,6 +84,7 @@ function App() {
     });
 
   }
+  
   
   ///MAKING CATEGORIES DYNAMIC (5)
   const categories = items.reduce((categories, item) => {
