@@ -5,9 +5,9 @@ const fs = require('fs');
 const path = require('path');
 
 /////GET JSON FILE (2)
-// const itemsFile = './items.json';
-// const itemsFilePath = path.resolve(__dirname, itemsFile);
-const itemsFilePath = path.join(__dirname, 'items.json');
+const itemsFile = './items.json';
+const itemsFilePath = path.resolve(__dirname, itemsFile);
+// const itemsFilePath = path.join(__dirname, 'items.json');
 
 /////PRINT JSON FILE ITEMS IN GET RESPONSE (3) 
 router.get('/', (request, response) => {
@@ -19,7 +19,7 @@ router.get('/', (request, response) => {
 router.get('/:id', (request, response) => {
   const itemsList = fs.readFileSync(itemsFilePath);
   const itemsListTransform = JSON.parse(itemsList);
-  const item = itemsListTransform.find((item) => item.id == request.params.id);
+  const item = itemsListTransform.find((item) => item.id === request.params.id);
   response.send(item);
 });
 
