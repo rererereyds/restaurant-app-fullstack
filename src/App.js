@@ -19,15 +19,18 @@ function App() {
 
   ///CONNECTING THIS FRONTEND TO BACKEND (9)
   useEffect (() => {
-    axios.get('https://reyda-resto-project-api.herokuapp.com/items').then((response) => {
+    // axios.get('https://reyda-resto-project-api.herokuapp.com/items').then((response) => {
+    //   setItems(response.data);
+    // });
+    axios.get('https://fast-coast-35145-547960020c9e.herokuapp.com/items').then((response) => {
       setItems(response.data);
     });
 
-    axios.get('https://reyda-resto-project-api.herokuapp.com/cartItems').then((response) => {
+    axios.get('https://fast-coast-35145-547960020c9e.herokuapp.com/cartItems').then((response) => {
       setOrderedItems(response.data);
     });
 
-    axios.get('https://reyda-resto-project-api.herokuapp.com/cartItems/getTotalAmount').then((response) => {
+    axios.get('https://fast-coast-35145-547960020c9e.herokuapp.com/cartItems/getTotalAmount').then((response) => {
       setCartTotal(response.data.total);
     });
   }, []); 
@@ -71,15 +74,15 @@ function App() {
   const deleteItem = async (id) => {
 
     // const updatedList = items.filter(item => item.id !== id);
-    await axios.delete(`https://reyda-resto-project-api.herokuapp.com/items/${id}`, id).then((response) => {
+    await axios.delete(`https://fast-coast-35145-547960020c9e.herokuapp.com/items/${id}`, id).then((response) => {
       setItems(response.data);
     });
 
-    await axios.delete(`https://reyda-resto-project-api.herokuapp.com/cartItems/${id}`, id).then((response) => {
+    await axios.delete(`https://fast-coast-35145-547960020c9e.herokuapp.com/cartItems/${id}`, id).then((response) => {
       setOrderedItems(response.data);
     });
 
-    axios.get('https://reyda-resto-project-api.herokuapp.com/getTotalAmount').then((response) => {
+    axios.get('https://fast-coast-35145-547960020c9e.herokuapp.com/getTotalAmount').then((response) => {
       setCartTotal(response.data.total);
     });
 
@@ -128,16 +131,16 @@ function App() {
       }
     });
 
-    axios.put(`https://reyda-resto-project-api.herokuapp.com/items/${editItem.id}`, editItem).then((response) => {
+    axios.put(`https://fast-coast-35145-547960020c9e.herokuapp.com/items/${editItem.id}`, editItem).then((response) => {
       setItems(response.data);
       setEditModal(false);
     });
 
-    axios.put(`https://reyda-resto-project-api.herokuapp.com/cartItems/${editItem.id}/edit`, editItem).then((response) => {
+    axios.put(`https://fast-coast-35145-547960020c9e.herokuapp.com/cartItems/${editItem.id}/edit`, editItem).then((response) => {
       setOrderedItems(response.data);
     });
     
-    axios.get('https://reyda-resto-project-api.herokuapp.com/cartItems/getTotalAmount').then((response) => {
+    axios.get('https://fast-coast-35145-547960020c9e.herokuapp.com/cartItems/getTotalAmount').then((response) => {
       setCartTotal(response.data.total);
     });
 
@@ -148,15 +151,15 @@ function App() {
   const orderSubmit = async (id) => {
     let item = {};
 
-    item = await axios.get(`https://reyda-resto-project-api.herokuapp.com/items/${id}`).then((response) => {
+    item = await axios.get(`https://fast-coast-35145-547960020c9e.herokuapp.com/items/${id}`).then((response) => {
       return response.data;
     });
 
-    await axios.post('https://reyda-resto-project-api.herokuapp.com/cartItems', item).then((response) => {
+    await axios.post('https://fast-coast-35145-547960020c9e.herokuapp.com/cartItems', item).then((response) => {
       setOrderedItems(response.data);
     });
 
-    axios.get('https://reyda-resto-project-api.herokuapp.com/cartItems/getTotalAmount').then((response) => {
+    axios.get('https://fast-coast-35145-547960020c9e.herokuapp.com/cartItems/getTotalAmount').then((response) => {
       setCartTotal(response.data.total);
     });
   };
@@ -165,12 +168,12 @@ function App() {
   const removeFromCart = (id) => {
     const cartCopy = orderedItems.filter(item => item.id !== id);
 
-    axios.delete(`https://reyda-resto-project-api.herokuapp.com/cartItems/${id}`, id).then((response) => {
+    axios.delete(`https://fast-coast-35145-547960020c9e.herokuapp.com/cartItems/${id}`, id).then((response) => {
       setOrderedItems(cartCopy);
       setOrderedItems(response.data);
     });
  
-    axios.get('https://reyda-resto-project-api.herokuapp.com/cartItems/getTotalAmount').then((response) => {
+    axios.get('https://fast-coast-35145-547960020c9e.herokuapp.com/cartItems/getTotalAmount').then((response) => {
       setCartTotal(response.data.total);
     });
     
@@ -183,7 +186,7 @@ function App() {
     const item = {id: uuidv4(), ...newItem};
     // console.log(`hey ${item}`);
 
-    axios.post("https://reyda-resto-project-api.herokuapp.com/items", item).then((response) => {
+    axios.post("https://fast-coast-35145-547960020c9e.herokuapp.com/items", item).then((response) => {
       // const itemsAtArray = [...items, item];
       // setItems(itemsAtArray);
       setItems(response.data);
@@ -195,15 +198,15 @@ function App() {
   const addCartQuantity = async (id) => {
     let item = {};
 
-    item = await axios.get(`https://reyda-resto-project-api.herokuapp.com/items/${id}`).then((response) => {
+    item = await axios.get(`https://fast-coast-35145-547960020c9e.herokuapp.com/items/${id}`).then((response) => {
       return response.data;
     });
 
-    await axios.post("https://reyda-resto-project-api.herokuapp.com/cartItems", item).then((response) => {
+    await axios.post("https://fast-coast-35145-547960020c9e.herokuapp.com/cartItems", item).then((response) => {
       setOrderedItems(response.data);
     });
 
-    axios.get('https://reyda-resto-project-api.herokuapp.com/cartItems/getTotalAmount').then((response) => {
+    axios.get('https://fast-coast-35145-547960020c9e.herokuapp.com/cartItems/getTotalAmount').then((response) => {
       setCartTotal(response.data.total);
     });
   };
@@ -214,19 +217,19 @@ function App() {
       qty: 1
     };
 
-    await axios.put(`https://reyda-resto-project-api.herokuapp.com/cartItems/${id}`, reqParam).then((response) => {
+    await axios.put(`https://fast-coast-35145-547960020c9e.herokuapp.com/cartItems/${id}`, reqParam).then((response) => {
       console.log(response.data);
       setOrderedItems(response.data);
     });
 
-    axios.get('https://reyda-resto-project-api.herokuapp.com/cartItems/getTotalAmount').then((response) => {
+    axios.get('https://fast-coast-35145-547960020c9e.herokuapp.com/cartItems/getTotalAmount').then((response) => {
       setCartTotal(response.data.total);
     });
 
   };
 
   const checkout = async () => {
-    await axios.post('https://reyda-resto-project-api.herokuapp.com/cartItems/checkout').then((response) => {
+    await axios.post('https://fast-coast-35145-547960020c9e.herokuapp.com/cartItems/checkout').then((response) => {
       window.location.reload();
     });
   }

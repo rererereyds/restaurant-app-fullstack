@@ -4,7 +4,7 @@ const ShowItems = ({id, image, name, price, category, deleteItem, description, s
 
   let item = {};
   
-  axios.get(`https://reyda-resto-project-api.herokuapp.com/items/${id}`).then((response) => {
+  axios.get(`https://fast-coast-35145-547960020c9e.herokuapp.com/items/${id}`).then((response) => {
     item = response.data;
   });
 
