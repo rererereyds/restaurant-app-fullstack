@@ -5,8 +5,9 @@ const fs = require('fs');
 const path = require('path');
 
 /////GET JSON FILE (2)
-const itemsFile = './items.json';
-const itemsFilePath = path.resolve(__dirname, itemsFile);
+// const itemsFile = './items.json';
+// const itemsFilePath = path.resolve(__dirname, itemsFile);
+const itemsFilePath = path.join(__dirname, 'items.json');
 
 /////PRINT JSON FILE ITEMS IN GET RESPONSE (3) 
 router.get('/', (request, response) => {
