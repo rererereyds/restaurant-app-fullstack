@@ -46,7 +46,7 @@ router.put("/:id", (request, response) => {
   const itemsList = JSON.parse(fs.readFileSync(itemsFilePath));
 
   itemsList.forEach((item) => {
-    if (item.id == request.params.id) {
+    if (item.id === request.params.id) {
       item.image = request.body.image;
       item.name = request.body.name;
       // item.price = request.body.price;
@@ -63,7 +63,7 @@ router.delete("/:id", (request, response) => {
   const itemsList = JSON.parse(fs.readFileSync(itemsFilePath));
 
   const filteredItems = itemsList.filter(
-    (item) => item.id != request.params.id
+    (item) => item.id !== request.params.id
   );
 
   fs.writeFileSync(itemsFilePath, JSON.stringify(filteredItems));
